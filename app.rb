@@ -10,7 +10,7 @@ class Updater
 		@start_time = Time.now
 		@released_torrents = get_torrent_releases
 		@tracker_keywords = prepare_tracker_keywords
-		@regexkeywords = convert_keywords_to_regex
+		@regex_keywords = convert_keywords_to_regex
 		@updated_matches = match_regex_and_torrents
 #		update_tracker_timestamps
 #		generate_updated_tracker_list
@@ -63,9 +63,8 @@ class Updater
 			else 
 				throwback = "/" + builder + ".*" + last + ".*$" + "/i"
 			end
-			Regexp.try_convert(throwback)
+			eval(throwback)
 		end	
-		keywords
 	end
 
 	def match_regex_and_torrents
