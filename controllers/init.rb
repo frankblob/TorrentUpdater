@@ -1,0 +1,8 @@
+require_relative 'get_torrent_releases'
+require_relative 'prepare_tracker_keywords'
+require_relative 'convert_keywords_to_regex'
+require_relative 'match_regex_and_torrents'
+require_relative 'update_tracker_timestamps'
+require_relative 'generate_updated_tracker_list'
+#require_relative 'mail_admin_summary'
+#require_relative 'mail_users_with_new_releases'
